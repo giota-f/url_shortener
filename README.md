@@ -1,4 +1,6 @@
 # url_shortener
+```
+
 setup env:
 sudo apt -y update
 sudo apt -y install snapd
@@ -23,3 +25,4 @@ sudo docker build -f Dockerfile.restapi -t restapi:local .
 sudo docker save restapi > restapi.tar
 microk8s.ctr -n k8s.io image import restapi.tar
 microk8s.ctr -n k8s.io images ls
+```
