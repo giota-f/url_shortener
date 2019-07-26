@@ -2,19 +2,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: restapi-service
+  name: restapi
 spec:
   selector:
     app: restapi
+  type: NodePort
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    nodePort: 32576
+    port: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: restapi-deployment
+  name: restapi
   labels:
     app: restapi
 spec:
@@ -30,8 +31,9 @@ spec:
       containers:
         - name: restapi
           image: thecuriousdoggo/restapi:public 
+          imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 5000
           env:
             - name: db_name
               value: sql

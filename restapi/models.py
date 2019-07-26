@@ -1,7 +1,7 @@
 import string
 from restapi import mysql
 
-class Link(mysql.Model):
+'''class Link(mysql.Model):
     id = mysql.Column(mysql.Integer, primary_key=True)
     original_url = mysql.Column(mysql.String(512))
     short_url = mysql.Column(mysql.String(100), unique=True)
@@ -11,4 +11,4 @@ class Link(mysql.Model):
         self.short_url = self.generate_short_link()
 
     def generate_short_link(self):
-        pass
+        pass'''
