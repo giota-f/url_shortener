@@ -46,3 +46,9 @@ docker tag imageid thecuriousdoggo/restapi:public
 docker push thecuriousdoggo/restapi
 ```
 ### Deploy restapi app on Kubernetes
+
+```
+microk8s.kubectl create -f mysql-deployment.yaml
+```
+
+Check service is running ...
