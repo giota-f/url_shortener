@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: restapi
-          image: docker.io/library/restapi:local 
+          image: thecuriousdoggo/restapi:public 
           ports:
             - containerPort: 80
           env:
