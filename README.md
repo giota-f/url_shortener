@@ -21,8 +21,9 @@ restapi docker image create:
 sudo apt-get install docker.io
 sudo usermod -aG docker ubuntu
 su - ubuntu
-sudo docker build -f Dockerfile.restapi -t restapi:local .
-sudo docker save restapi > restapi.tar
-microk8s.ctr -n k8s.io image import restapi.tar
-microk8s.ctr -n k8s.io images ls
+docker login
+sudo docker build -f Dockerfile -t thecuriousdoggo/restapi:public .
+docker images
+docker tag 9b88be309e9a thecuriousdoggo/restapi:public
+docker push thecuriousdoggo/restapi
 ```
