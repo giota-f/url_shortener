@@ -51,4 +51,5 @@ docker push thecuriousdoggo/restapi
 microk8s.kubectl create -f mysql-deployment.yaml
 ```
 
-Check service is running ...
+Notes!
+In a real env deployment DB credentials would be hibben also there will not be any hardocoded configuration in the code and they will discovered by kubernetes and passed as env variables
